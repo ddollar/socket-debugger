@@ -4,7 +4,12 @@ socket-debugger
   socket-debugger is a Rails plugin to allow use of ruby-debug in situations
   where the server is not on a pty (aka Passenger)
 
+Usage
+=====
 
+  Once your server of choice is started, use `rake debug:socket` to connect
+  to the debugger.
+  
 Installation
 ============
 
