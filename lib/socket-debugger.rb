@@ -1,6 +1,7 @@
 require 'ruby-debug'
 require 'socket'
 require 'thread'
+require 'fileutils'
 
 module Debugger
   SOCKET_PATH = File.join(Rails.root, 'tmp', 'sockets', 'debugger')
@@ -13,6 +14,8 @@ module Debugger
       self.interface = nil
       start
       self.post_mortem if post_mortem
+
+			FileUtils.mkdir_p(File.dirname(socket_path))
 
       server_path  = "#{socket_path}.server"
       control_path = "#{socket_path}.control"
