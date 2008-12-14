@@ -1,6 +1,6 @@
 # Include hook code here
 
-if Rails.env.development?
+if RAILS_ENV == 'development'
   require 'socket-debugger'
   Debugger.start_unix_socket_remote
 end
