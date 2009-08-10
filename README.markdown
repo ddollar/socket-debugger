@@ -1,3 +1,9 @@
+Warning
+=======
+
+  socket-debugger is no longer maintained
+  Please check out Rack::Debug  http://github.com/ddollar/rack-debug  as a replacement
+
 socket-debugger
 ===============
 
